@@ -1,0 +1,27 @@
+# Maintainer: Julio Napurí <julionc@gmail.com>
+pkgname=titanium
+_pkgname=titanium-developer
+pkgver=1.2.2
+pkgrel=1
+pkgdesc='Appcelerator Titanium is a platform for developing mobile and desktop applications using web technologies.'
+arch=('i686' 'x86_64')
+url='http://www.appcelerator.com/'
+license=('Apache')
+depends=('java-environment' 'android-sdk')
+install='titanium.install'
+source=("http://cloud2.appcelerator.net/linux_32bit_i386/c87e2d18f16f3c4633f8f51ae030a707/eab3b3b3-8b97-4484-aeda-21820c4a3dbb/Titanium Developer.tgz"
+        "titanium.desktop")
+md5sums=('892a781d6045b4bdaa48c47d4784fb47'
+         '632ec98f8c24485a3e48b9112ad2ac48')
+[ "$CARCH" = "x86_64" ] && source[0]="http://cloud2.appcelerator.net/linux_64bit_i386/c87e2d18f16f3c4633f8f51ae030a707/b9b8572f-8cb8-4165-b524-65779a253160/Titanium Developer.tgz"
+[ "$CARCH" = "x86_64" ] && md5sums[0]=''
+
+package() {
+  install -d ${pkgdir}/opt/
+  cp -r "${srcdir}/Titanium Developer-${pkgver}" "${pkgdir}/opt/${_pkgname}"
+
+#  install -D -m644 titanium.desktop $pkgdir/usr/share/applications/titanium.desktop
+
+#  install -d ${pkgdir}/usr/bin
+#  ln -s "/usr/share/titanium/Titanium Developer"  "${pkgdir}/usr/bin/titanium"
+}

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Titanium
+Comment=Titanium
+Icon=titanium
+Exec=titanium
+Terminal=false
+Type=Application
+Categories=Development;IDE
+StartupNotify=true
