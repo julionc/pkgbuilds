@@ -1,0 +1,47 @@
+# Maintainer: Julio Napurí <julionc@gmail.com>
+pkgname=erlyvideo
+pkgver=20110511
+pkgrel=1
+pkgdesc='Erlang Media Server for Flash (RTMP) Audio/Video streaming.'
+arch=('any')
+url='https://erlyvideo.org/'
+license=('GPL')
+depends=('erlang')
+makedepends=('git')
+#install="${pkgname}.install"
+
+_gitroot=git://github.com/erlyvideo/erlyvideo.git
+_gitname=erlyvideo
+
+build() {
+  cd "${srcdir}"
+  msg "Connecting to GIT server...."
+
+  if [ -d $_gitname ] ; then
+    cd $_gitname && git pull origin
+    msg "The local files are updated."
+  else
+    git clone $_gitroot
+  fi
+
+  msg "GIT checkout done or server timeout"
+
+#  mkdir -p "${pkgdir}/usr/share/webapps/webgrind"
+#  mkdir -p "${pkgdir}/etc/webapps/webgrind"
+  cd "${srcdir}/${_gitname}"
+  cp priv/erlyvideo.conf.sample priv/erlyvideo.conf
+  make
+}
+
+package(){
+  cd "${srcdir}/${_gitname}"
+  make
+  make release
+
+  #Arch package
+  cp -R erlyvideo  "${pkgdir}"
+
+}
+
+
+
