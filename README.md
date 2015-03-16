@@ -1,6 +1,7 @@
 # Arch Linux Packages
 
-This project contains the **PKGBUILDs** of packages I plan to maintain for [Arch Linux](http://www.archlinux.org/) and the [Arch User Repository (AUR)](https://aur.archlinux.org). Contact me with problems/fixes should they arise.
+This project contains the **PKGBUILDs** of packages I plan to maintain for [Arch Linux](http://www.archlinux.org/) and the [Arch User Repository (AUR)](https://aur.archlinux.org).
+Contact me with problems/fixes should they arise.
 
 ## PKGBUILDs
 
@@ -21,6 +22,14 @@ makepkg -s
 pacman -U webgrind-git-20120311-1-i686.pkg.tar.xz
 ```
 
-My packages https://aur.archlinux.org/packages.php?SeB=m&K=julionc
+My packages: https://aur.archlinux.org/packages.php?SeB=m&K=julionc
 
+## Packages
+
+| Name |Description |Version |Status|
+|--------|---|---|---|
+|webgrind-git|Xdebug Profiling Web Frontend in PHP|1.0-1|  |
+|webgrind|Xdebug Profiling Web Frontend in PHP|20110421-1|   |
+|xoops|A PHP-based content management platform|2.5.1-1| outdated|
+|zf|ZendFramework - An object-oriented web-application framework for PHP projects|1.11.6-1| outdated|
 
