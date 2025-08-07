@@ -28,8 +28,8 @@ My packages: https://aur.archlinux.org/packages.php?SeB=m&K=julionc
 
 | Name |Description |Version |Status|
 |--------|---|---|---|
-|webgrind-git|Xdebug Profiling Web Frontend in PHP|1.0-1|  |
-|webgrind|Xdebug Profiling Web Frontend in PHP|20110421-1|   |
-|xoops|A PHP-based content management platform|2.5.1-1| outdated|
-|zf|ZendFramework - An object-oriented web-application framework for PHP projects|1.11.6-1| outdated|
+|webgrind-git|Xdebug Profiling Web Frontend in PHP|1.0-1|  orphan|
+|webgrind|Xdebug Profiling Web Frontend in PHP|20110421-1| orphan|
+|xoops|A PHP-based content management platform|2.5.1-1| removed|
+|zf|ZendFramework - An object-oriented web-application framework for PHP projects|1.11.6-1| removed|
 
